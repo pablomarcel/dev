@@ -3,16 +3,18 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* Single-column layout: one centered card per row */
+/* Hide large page title on home */
 .page--home .page__title { display: none; }
 .page__content { margin-top: .25rem; }
 
-.grid {
+/* Single-column helper (wins with !important) */
+.grid--one {
   display: grid;
-  grid-template-columns: 1fr;   /* <- single column */
+  grid-template-columns: 1fr !important;
   gap: 1.25rem;
 }
 
+/* Card */
 .project-card {
   background: var(--mm-body-background);
   border: 1px solid rgba(0,0,0,0.06);
@@ -21,9 +23,7 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   transition: transform .2s ease, box-shadow .2s ease;
   display: flex; flex-direction: column; height: 100%;
-  max-width: 760px;            /* nice readable width */
-  margin-left: auto;           /* center the card */
-  margin-right: auto;
+  max-width: 760px; margin: 0 auto; /* centered */
 }
 .project-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.18); }
 
@@ -37,5 +37,5 @@
 .card-buttons { margin-top: auto; display: flex; gap: .75rem; padding-top: .75rem; }
 .btn-pill { display: inline-block; padding: .5rem .9rem; border-radius: 999px; border: 1px solid rgba(0,0,0,0.2); }
 
-/* Headings feel */
+/* Heading feel */
 .page__content h1, .page__content h2, .page__content h3 { font-weight: 800; letter-spacing: -0.01em; }
