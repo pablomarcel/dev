@@ -5,11 +5,12 @@ classes: "wide page--home"
 excerpt: "Python • Control Systems • Robotics • Web"
 ---
 
+<div class="wrap-center">
+
 ## Featured Projects
 
+<div class="stack">
 {% assign featured = site.projects | where_exp: "p", "p.featured == true" | sort: "date" | reverse %}
-{% if featured.size > 0 %}
-<div class="grid grid--one">
 {% for p in featured limit: 6 %}
   <div class="project-card">
     <div class="card-media">
@@ -26,11 +27,10 @@ excerpt: "Python • Control Systems • Robotics • Web"
   </div>
 {% endfor %}
 </div>
-{% endif %}
 
 ## Latest Projects
 
-<div class="grid grid--one">
+<div class="stack">
 {% assign latest = site.projects | sort: "date" | reverse %}
 {% for p in latest limit: 12 %}
   <div class="project-card">
@@ -47,4 +47,6 @@ excerpt: "Python • Control Systems • Robotics • Web"
     </div>
   </div>
 {% endfor %}
+</div>
+
 </div>
