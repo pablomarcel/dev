@@ -5,7 +5,16 @@ classes: "wide page--home"
 excerpt: "Python • Control Systems • Robotics • Web"
 ---
 
-## Featured Projects
+<!-- Left TOC Rail -->
+<nav class="left-rail" aria-label="Sections">
+  <h4>Sections</h4>
+  <ul>
+    <li><a href="#featured">Featured Projects</a></li>
+    <li><a href="#latest">Latest Projects</a></li>
+  </ul>
+</nav>
+
+## Featured Projects {: #featured }
 
 <div class="stack">
 {% assign featured = site.projects | where_exp: "p", "p.featured == true" | sort: "date" | reverse %}
@@ -26,7 +35,7 @@ excerpt: "Python • Control Systems • Robotics • Web"
 {% endfor %}
 </div>
 
-## Latest Projects
+## Latest Projects {: #latest }
 
 <div class="stack">
 {% assign latest = site.projects | sort: "date" | reverse %}

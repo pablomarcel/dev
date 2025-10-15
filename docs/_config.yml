@@ -49,7 +49,6 @@ defaults:
 
 header_pages:
   - index.md
-  - projects/index.md
 
 footer:
   links:

@@ -6,8 +6,7 @@
 /* Hide large page title on home */
 .page--home .page__title { display: none; }
 
-/* Hard-center the content area on home and kill floats/side padding */
-.page--home .page__inner-wrap { padding-left: 0 !important; padding-right: 0 !important; }
+/* Center the content on home */
 .page--home .page__content {
   float: none !important;
   max-width: 820px;
@@ -15,9 +14,28 @@
   margin-right: auto !important;
   padding: 0 1rem;
 }
-.page--home .toc, .page--home .toc__menu, .page--home .sidebar { display: none !important; }
 
-/* Single-column stack (no CSS grid fights) */
+/* Fixed left TOC rail (visual balance only; hides on smaller widths) */
+.left-rail {
+  position: fixed;
+  left: 2rem;
+  top: 8rem;
+  width: 230px;
+  z-index: 1;
+  border-left: 3px solid #e2e2e2;
+  padding-left: 1rem;
+}
+.left-rail h4 { margin-top: 0; font-weight: 800; letter-spacing: -0.01em; }
+.left-rail ul { list-style: none; padding-left: 0; }
+.left-rail li { margin: .35rem 0; }
+.left-rail a { color: #444; text-decoration: none; }
+.left-rail a:hover { text-decoration: underline; }
+
+@media (max-width: 1280px) {
+  .left-rail { display: none; }
+}
+
+/* Stack of single cards */
 .stack .project-card { margin-bottom: 1.25rem; }
 
 .project-card {
