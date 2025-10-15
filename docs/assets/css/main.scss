@@ -1,0 +1,46 @@
+---
+---
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* Keep original typographic feel */
+.page__content h1, .page__content h2, .page__content h3 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Cards grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px)  { .grid { grid-template-columns: 1fr; } }
+
+.project-card {
+  background: var(--mm-body-background);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: transform .2s ease, box-shadow .2s ease;
+  display: flex; flex-direction: column; height: 100%;
+}
+.project-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.18); }
+
+.card-media { width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; }
+.card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.card-body { margin-top: .75rem; }
+.card-body p { color: #666; }
+
+.card-buttons { margin-top: auto; display: flex; gap: .75rem; padding-top: .75rem; }
+.btn-pill {
+  display: inline-block; padding: .5rem .9rem; border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Hide page title only on home */
+.page--home .page__title { display: none; }
+.page--home .page__content { margin-top: .25rem; }

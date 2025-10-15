@@ -1,0 +1,5 @@
+primary:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: "/projects/"
