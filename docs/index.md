@@ -5,7 +5,7 @@ classes: "page--home"
 description: "Python • Control Systems • Web"
 ---
 
-## Featured Projects {:#featured-projects}
+<h2 id="featured-projects">Featured Projects</h2>
 
 <div class="stack">
 {% assign featured = site.projects | where_exp: "p", "p.featured == true" | sort: "date" | reverse %}
@@ -26,7 +26,7 @@ description: "Python • Control Systems • Web"
 {% endfor %}
 </div>
 
-## Latest Projects {:#latest-projects}
+<h2 id="latest-projects">Latest Projects</h2>
 
 <div class="stack">
 {% assign latest = site.projects | sort: "date" | reverse %}
