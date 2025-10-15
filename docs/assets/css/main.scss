@@ -3,15 +3,23 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* Enforce centered layout on wide screens */
-.page, .page__inner-wrap, .page__content {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+/* === HARD CENTER FIX FOR HOME (single layout, no sidebar) === */
+.layout--single .page__inner-wrap {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
-.page__content { padding-left: 1rem; padding-right: 1rem; }
+.layout--single .page__content {
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* If any sticky ToC sneaks in, kill it */
+.toc, .toc__menu { display: none !important; }
 
-/* Typography (keep original feel) */
+/* Typography */
 .page__content h1, .page__content h2, .page__content h3 {
   font-weight: 800;
   letter-spacing: -0.01em;
