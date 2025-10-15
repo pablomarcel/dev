@@ -5,8 +5,6 @@ classes: "wide page--home"
 excerpt: "Python • Control Systems • Robotics • Web"
 ---
 
-<div class="wrap-center">
-
 ## Featured Projects
 
 <div class="stack">
@@ -47,6 +45,4 @@ excerpt: "Python • Control Systems • Robotics • Web"
     </div>
   </div>
 {% endfor %}
-</div>
-
 </div>
