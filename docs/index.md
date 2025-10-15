@@ -16,7 +16,7 @@ excerpt: "Python • Control Systems • Robotics • Web"
       {% if p.thumb %}<img src="{{ p.thumb | relative_url }}" alt="{{ p.title }} thumbnail">{% endif %}
     </div>
     <div class="card-body">
-      <h3 style="margin-top:.6rem;">{{ p.title }}</h3>
+      <h3>{{ p.title }}</h3>
       <p>{{ p.stack }}</p>
     </div>
     <div class="card-buttons">
@@ -38,7 +38,7 @@ excerpt: "Python • Control Systems • Robotics • Web"
       {% if p.thumb %}<img src="{{ p.thumb | relative_url }}" alt="{{ p.title }} thumbnail">{% endif %}
     </div>
     <div class="card-body">
-      <h3 style="margin-top:.6rem;">{{ p.title }}</h3>
+      <h3>{{ p.title }}</h3>
       <p>{{ p.stack }}</p>
     </div>
     <div class="card-buttons">
