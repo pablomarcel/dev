@@ -1,7 +1,7 @@
 primary:
   - title: "Featured"
-    url: "/dev/#featured-projects"
+    url: "/#featured-projects"
   - title: "Latest"
-    url: "/dev/#latest-projects"
+    url: "/#latest-projects"
   - title: "Projects"
-    url: "/dev/projects/"
+    url: "/projects/"
